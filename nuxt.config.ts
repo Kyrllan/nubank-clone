@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      charset: 'utf-8',
+      charset: 'UTF-8',
     },
   },
   devtools: {enabled: true},
@@ -10,9 +10,17 @@ export default defineNuxtConfig({
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
     '@/assets/css/fonts.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   build: {
-    transpile: ['vuetify'],
+    transpile: [
+      'vuetify',
+      '@fortawesome/vue-fontawesome',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/free-regular-svg-icons',
+      '@fortawesome/free-brands-svg-icons',
+    ],
   },
   modules: [
     [
